@@ -1,4 +1,4 @@
-# node-snips-light-brain
+# Node-snips-light-brain :bulb:
 Node server to interact with yeelight. Provide API and web ui management.
 
 ## Installation
