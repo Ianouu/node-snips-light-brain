@@ -47,7 +47,7 @@ router.get('/turn/:mode/:id', db_utils.middleware_logs, F_auth_middleware,functi
     // Another one.
     } else {
       O_Light = A_lights.find((P_O_light) => P_O_light.id == S_Id);    
-      if (O_Light.light.connected) {
+      if (O_Light && O_Light.light.connected) {
         O_Light.light.sendCommand({
             id: -1,
             method: 'set_power',

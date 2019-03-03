@@ -42,3 +42,6 @@ user-notification
 
 # No credentials
 *.htpasswd
+
+# No db file
+*.db
