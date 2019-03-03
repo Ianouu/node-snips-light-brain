@@ -39,3 +39,6 @@ jspm_packages
 # No updates on config neither ID
 config.json
 user-notification
+
+# No credentials
+*.htpasswd

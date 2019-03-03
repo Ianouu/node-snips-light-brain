@@ -6,6 +6,19 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Connected lights:</p>
+    <ul>
+      <% for(var i=0; i< lights.length; i++) { %>
+      <li>ID: <%=lights[i].id %> -  <%=lights[i].light.device.Location%></li>
+        <ul>
+          <li>Model: <%=lights[i].light.device.model%></li>
+          <li>Power: <%=lights[i].light.device.power%></li>
+          <li>RGB: <%=lights[i].light.device.rgb%></li>
+          <li>Saturation: <%=lights[i].light.device.sat%></li>
+        </ul>
+      </li>
+      <% } %>
+
+    </ul>
   </body>
 </html>
