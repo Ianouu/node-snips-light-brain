@@ -46,6 +46,39 @@
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Dashboards</h1>
 
+          <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Your lights</h6>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Address</th>
+                  <th>Model</th>
+                  <th>Power</th>
+                  <th>RGB</th>
+                  <th>Saturation</th>
+                  <th>Connected</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% for(var i=0; i< lights.length; i++) { %>
+                <tr>
+                  <td><%=lights[i].id %></td>
+                  <td><%=lights[i].light.device.Location%></td>
+                  <td><%=lights[i].light.device.model%></td>
+                  <td><%=lights[i].light.device.power%></td>
+                  <td><%=lights[i].light.device.rgb%></td>
+                  <td><%=lights[i].light.device.sat%></td>
+                  <td><%=lights[i].light.device.connected%></td>
+                </tr>
+              <% } %>        
+              </tbody>
+            </table>
+          </div>
+        </div>
         </div>
         <!-- /.container-fluid -->
 

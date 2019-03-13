@@ -17,7 +17,13 @@ discoverer.discoverLights(A_lights);
 
 /*  * * * * * * * * HOME PAGE* * * * * * * * * * * * * */
 router.get('/', db_utils.middleware_logs, function(req, res, next) {
-  res.render('index', { title: 'Yeelight Brain', lights : A_lights});
+  res.render('index', { title: 'Yeelight Brain'});
+      
+});
+
+/*  * * * * * * * * LIGHTS PAGE* * * * * * * * * * * * * */
+router.get('/lights', db_utils.middleware_logs, function(req, res, next) {
+  res.render('lights', { title: 'Yeelight Brain', lights : A_lights});
       
 });
 
