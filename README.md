@@ -1,4 +1,4 @@
-# What is a smart light without brain ? :neutral_face: This is a brain :bulb:
+# What is a smart light without brain ? :neutral_face: :bulb:
 Node server to interact with yeelight. Provide API and web ui management.
 
 ## Installation
