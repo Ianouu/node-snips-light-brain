@@ -9,7 +9,7 @@ var F_auth_middleware = auth_lib.auth.connect(auth_lib.basic);
 
 // Fetch all ligghts.
 let A_lights = [];
-discoverer.discoverLights(A_lights);
+discoverer.initLights(A_lights);
 
 /*  * * * * * * * * * * * * * * * * * * * * * */
 /*  * * * * * * * ROUTES * * * * * * * * * *  */
@@ -22,7 +22,7 @@ router.get('/', db_utils.middleware_logs, function(req, res, next) {
 });
 
 /*  * * * * * * * * LIGHTS PAGE* * * * * * * * * * * * * */
-router.get('/lights', db_utils.middleware_logs, function(req, res, next) {
+router.get('/lights', db_utils.middleware_logs, function(req, res, next) {  
   res.render('lights', { title: 'Yeelight Brain', lights : A_lights});
       
 });
